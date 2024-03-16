@@ -28,10 +28,10 @@ for y in 0..HEIGHT {
 }
 
 // Buffer for the BMP data
-let mut image = [0u8; WIDTH * HEIGHT * 3 + simple_bmp::BMP_HEADER_SIZE];
+let mut image = [0u8; simple_bmp::buffer_length(500, 500)];
 
 // Write the pixels into the BMP buffer
-simple_bmp::write_bmp(&mut image, WIDTH as u16, HEIGHT as u16, &pixels).unwrap();
+simple_bmp::write_bmp(&mut image, WIDTH, HEIGHT, &pixels).unwrap();
 
 // Maybe you want to store the BMP on disk
 // std::fs::write("./image.bmp", &image).unwrap();
