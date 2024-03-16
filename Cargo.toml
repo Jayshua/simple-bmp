@@ -1,0 +1,11 @@
+[package]
+name = "simple-bmp"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Jayshua Nelson <me@jayshuanelson.com>"]
+repository = "https://github.com/Jayshua/simple-cookie"
+readme = "README.md"
+description = "A simple library for writing RGB pixels as a valid BMP file."
+
+[dependencies]
